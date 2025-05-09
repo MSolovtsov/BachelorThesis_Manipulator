@@ -1,4 +1,18 @@
-// KOMPAS files
+# KOMPAS files
 *.m3d.bak
 *.cdw.bak
-*.a3d.bak"
+*.a3d.bak
+*.frw
+
+# MatLab files
+*/slprj/
+*.slxc
+*.slx.autosave
+*.slx.original
+
+# Print dir
+*/*/_Print/
+
+# Other
+*.jpg
+*.png
