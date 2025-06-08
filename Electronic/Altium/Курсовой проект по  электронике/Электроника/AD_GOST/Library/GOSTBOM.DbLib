@@ -1,0 +1,57 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=MICROSOFT.ACE.OLEDB.12.0;Data Source=C:\Users\Public\Documents\Altium\AD_GOST\Library\DBGOSTBOM.xls;Extended Properties="Excel 8.0;HDR=Yes;IMEX=1"
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+DefaultColumnType=VARCHAR(255)
+LibraryDatabaseType=Microsoft Excel
+LibraryDatabasePath=C:\Users\Public\Documents\Altium\AD_GOST\Library\DBGOSTBOM.xls
+DatabasePathRelative=0
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=1
+SchemaName=
+LastFocusedTable=DB$FilterDatabase
+[Table1]
+SchemaName=
+TableName=DB$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table2]
+SchemaName=
+TableName=DB$FilterDatabase
+Enabled=False
+UserWhere=0
+UserWhereText=
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=Group0=64|Status0=75|Раздел0=114|Обозначение0=111|Наименование0=120|Part Number0=279|Analog0=68|Name0=228|ValueSCH0=85|PCB_Layout0=98|Pin Count0=86|Library Path0=119|Library Ref0=117|Footprint Path0=120|Footprint Ref0=222|ComponentLink1Description0=200|ComponentLink1URL0=194|ComponentLink2Description0=200|ComponentLink2URL0=435|HelpURL0=78|Manufacturer0=274|ManufacturerCountry0=158|StandartDoc0=146|ProductCode0=105
+[FieldMap1]
+Options=FieldName=DB$.Part Number|TableNameOnly=DB$|FieldNameOnly=Part Number|FieldType=0|ParameterName=Part Number|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=DB$.Library Path|TableNameOnly=DB$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=DB$.Library Ref|TableNameOnly=DB$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=DB$.Footprint Path|TableNameOnly=DB$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=DB$.Footprint Ref|TableNameOnly=DB$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=DB$FilterDatabase.Part Number|TableNameOnly=DB$FilterDatabase|FieldNameOnly=Part Number|FieldType=0|ParameterName=Part Number|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap7]
+Options=FieldName=DB$FilterDatabase.Library Path|TableNameOnly=DB$FilterDatabase|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=DB$FilterDatabase.Library Ref|TableNameOnly=DB$FilterDatabase|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=DB$FilterDatabase.Footprint Path|TableNameOnly=DB$FilterDatabase|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=DB$FilterDatabase.Footprint Ref|TableNameOnly=DB$FilterDatabase|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0

@@ -1,0 +1,11 @@
+Change Component Designator: OldDesignator=C1 NewDesignator=C2
+Change Component Designator: OldDesignator=C2 NewDesignator=C1
+Change Component Designator: OldDesignator=C3 NewDesignator=C4
+Change Component Designator: OldDesignator=C4 NewDesignator=C3
+Change Component Designator: OldDesignator=C6 NewDesignator=C7
+Change Component Designator: OldDesignator=C7 NewDesignator=C6
+Change Component Designator: OldDesignator=X2 NewDesignator=X4
+Change Component Designator: OldDesignator=X3 NewDesignator=X5
+Change Component Designator: OldDesignator=X4 NewDesignator=X6
+Change Component Designator: OldDesignator=X5 NewDesignator=X3
+Change Component Designator: OldDesignator=X6 NewDesignator=X2

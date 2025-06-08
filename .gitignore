@@ -11,7 +11,9 @@
 *.slx.original
 
 # Print dir
+*/_Print/
 */*/_Print/
+*/*/*/_Print/
 
 # Other
 *.jpg

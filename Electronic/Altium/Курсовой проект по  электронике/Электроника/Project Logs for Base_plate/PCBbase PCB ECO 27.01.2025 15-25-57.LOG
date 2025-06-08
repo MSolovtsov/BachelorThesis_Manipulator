@@ -1,0 +1,293 @@
+Added Component: Designator=C1(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C7(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C8(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C9(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C10(cap 1000)
+Added Component: Designator=C11(cap 1000)
+Added Component: Designator=C12(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C13(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C14(cap 1000)
+Added Component: Designator=C15(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C16(Capacitor 220nF E)
+Added Component: Designator=C17(CAP 10 uF)
+Add component (AddParameter): Name = "Parameter 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=DA1(IR2104)
+Added Component: Designator=DA2(IR2104)
+Added Component: Designator=DD1(QFP32(7x7))
+Added Component: Designator=DD2(LM2596)
+Added Component: Designator=L1(INDUCTOR)
+Add component (AddParameter): Name = "Code_IEC"; Value = "1005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Code_JEITA"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "29-May-2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "IPC-7351 Footprint Added."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Chip Inductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0402-A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "33 uH"; VariantName = "[No Variations]"
+Added Component: Designator=R1(0402)
+Add component (AddParameter): Name = "Reference"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TU"; Value = "ÿ ¿¡.434110.002“”"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "430 ŒÏ"; VariantName = "[No Variations]"
+Added Component: Designator=R2(0402)
+Add component (AddParameter): Name = "Reference"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TU"; Value = "ÿ ¿¡.434110.002“”"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "10 ŒÏ"; VariantName = "[No Variations]"
+Added Component: Designator=R3(0402)
+Add component (AddParameter): Name = "Reference"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TU"; Value = "ÿ ¿¡.434110.002“”"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "10 ŒÏ"; VariantName = "[No Variations]"
+Added Component: Designator=R4(0402)
+Add component (AddParameter): Name = "Reference"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TU"; Value = "ÿ ¿¡.434110.002“”"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "10 ŒÏ"; VariantName = "[No Variations]"
+Added Component: Designator=R5(0402)
+Add component (AddParameter): Name = "Reference"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TU"; Value = "ÿ ¿¡.434110.002“”"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "10 ŒÏ"; VariantName = "[No Variations]"
+Added Component: Designator=R6(0402)
+Add component (AddParameter): Name = "Reference"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TU"; Value = "ÿ ¿¡.434110.002“”"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "430 ŒÏ"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(button)
+Added Component: Designator=VD1(SK34)
+Added Component: Designator=VD2(SK34)
+Added Component: Designator=VD3(SK34)
+Added Component: Designator=VT1(TO-220AB)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Infineon Technologies"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IRF3205PBF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-220 International Rectifier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IRF3205PBF/Infineon%20Technologies/view-part/98571/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=VT2(TO-220AB)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Infineon Technologies"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IRF3205PBF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-220 International Rectifier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IRF3205PBF/Infineon%20Technologies/view-part/98571/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=VT3(TO-220AB)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Infineon Technologies"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IRF3205PBF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-220 International Rectifier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IRF3205PBF/Infineon%20Technologies/view-part/98571/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=VT4(TO-220AB)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Infineon Technologies"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IRF3205PBF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-220 International Rectifier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IRF3205PBF/Infineon%20Technologies/view-part/98571/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=X1(3pin)
+Add component (AddParameter): Name = "LineName1"; Value = "RX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName2"; Value = "GND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName3"; Value = "TX"; VariantName = "[No Variations]"
+Added Component: Designator=X2(4pin)
+Add component (AddParameter): Name = "LineName1"; Value = "+3.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName2"; Value = "GND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName3"; Value = "SDA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName4"; Value = "SCL"; VariantName = "[No Variations]"
+Added Component: Designator=X3(3pin)
+Add component (AddParameter): Name = "LineName1"; Value = "SWCLK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName2"; Value = "GND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName3"; Value = "SWDIO"; VariantName = "[No Variations]"
+Added Component: Designator=X4(2pin5mmVintKlemm)
+Add component (AddParameter): Name = "LineName1"; Value = "BRB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName2"; Value = "GND"; VariantName = "[No Variations]"
+Added Component: Designator=X5(2pin5mmVintKlemm)
+Add component (AddParameter): Name = "LineName1"; Value = "+12V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName2"; Value = "GND"; VariantName = "[No Variations]"
+Added Component: Designator=X6(2pin5mmVintKlemm)
+Add component (AddParameter): Name = "LineName1"; Value = "+ motor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LineName2"; Value = "- motor"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=+12V Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=+12V Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=+3.3V Pin=C4-2
+Added Pin To Net: NetName=+motor Pin=C5-1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=-motor Pin=C6-1
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=+3.3V Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=+3.3V Pin=C8-2
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=+12V Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=+12V Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=+12V Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=+12V Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=+12V Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=+12V Pin=C15-1
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=+3.3V Pin=C16-1
+Added Pin To Net: NetName=GND Pin=C16-2
+Added Pin To Net: NetName=+3.3V Pin=C17-1
+Added Pin To Net: NetName=GND Pin=C17-2
+Added Pin To Net: NetName=+12V Pin=DA1-1
+Added Pin To Net: NetName=PWM1 Pin=DA1-2
+Added Pin To Net: NetName=+12V Pin=DA1-3
+Added Pin To Net: NetName=GND Pin=DA1-4
+Added Pin To Net: NetName=NetDA1_5 Pin=DA1-5
+Added Pin To Net: NetName=+motor Pin=DA1-6
+Added Pin To Net: NetName=NetDA1_7 Pin=DA1-7
+Added Pin To Net: NetName=NetC5_2 Pin=DA1-8
+Added Pin To Net: NetName=+12V Pin=DA2-1
+Added Pin To Net: NetName=PWM2 Pin=DA2-2
+Added Pin To Net: NetName=+12V Pin=DA2-3
+Added Pin To Net: NetName=GND Pin=DA2-4
+Added Pin To Net: NetName=NetDA2_5 Pin=DA2-5
+Added Pin To Net: NetName=-motor Pin=DA2-6
+Added Pin To Net: NetName=NetDA2_7 Pin=DA2-7
+Added Pin To Net: NetName=NetC6_2 Pin=DA2-8
+Added Pin To Net: NetName=+3.3V Pin=DD1-1
+Added Pin To Net: NetName=NetC3_2 Pin=DD1-4
+Added Pin To Net: NetName=+3.3V Pin=DD1-5
+Added Pin To Net: NetName=PWM1 Pin=DD1-6
+Added Pin To Net: NetName=PWM2 Pin=DD1-7
+Added Pin To Net: NetName=USART_TX Pin=DD1-8
+Added Pin To Net: NetName=USART_RX Pin=DD1-9
+Added Pin To Net: NetName=VIOUT Pin=DD1-12
+Added Pin To Net: NetName=GND Pin=DD1-16
+Added Pin To Net: NetName=+3.3V Pin=DD1-17
+Added Pin To Net: NetName=NetC9_1 Pin=DD1-22
+Added Pin To Net: NetName=NetDD1_23 Pin=DD1-23
+Added Pin To Net: NetName=NetDD1_24 Pin=DD1-24
+Added Pin To Net: NetName=NetDD1_29 Pin=DD1-29
+Added Pin To Net: NetName=NetDD1_30 Pin=DD1-30
+Added Pin To Net: NetName=NetDD1_31 Pin=DD1-31
+Added Pin To Net: NetName=GND Pin=DD1-32
+Added Pin To Net: NetName=+12V Pin=DD2-1
+Added Pin To Net: NetName=NetDD2_2 Pin=DD2-2
+Added Pin To Net: NetName=GND Pin=DD2-3
+Added Pin To Net: NetName=+3.3V Pin=DD2-4
+Added Pin To Net: NetName=GND Pin=DD2-5
+Added Pin To Net: NetName=NetDD2_2 Pin=L1-1
+Added Pin To Net: NetName=+3.3V Pin=L1-2
+Added Pin To Net: NetName=NetC3_2 Pin=R1-1
+Added Pin To Net: NetName=+3.3V Pin=R1-2
+Added Pin To Net: NetName=NetDA1_7 Pin=R2-1
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetDA1_5 Pin=R3-1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetDA2_7 Pin=R4-1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetDA2_5 Pin=R5-1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetDD1_31 Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=GND Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=SW1-1
+Added Pin To Net: NetName=NetC3_2 Pin=SW1-2
+Added Pin To Net: NetName=NetC3_2 Pin=SW1-2
+Added Pin To Net: NetName=+12V Pin=VD1-1
+Added Pin To Net: NetName=NetC5_2 Pin=VD1-2
+Added Pin To Net: NetName=+12V Pin=VD2-1
+Added Pin To Net: NetName=NetC6_2 Pin=VD2-2
+Added Pin To Net: NetName=GND Pin=VD3-1
+Added Pin To Net: NetName=NetDD2_2 Pin=VD3-2
+Added Pin To Net: NetName=NetR2_2 Pin=VT1-1
+Added Pin To Net: NetName=+12V Pin=VT1-2
+Added Pin To Net: NetName=+motor Pin=VT1-3
+Added Pin To Net: NetName=NetR3_2 Pin=VT2-1
+Added Pin To Net: NetName=+motor Pin=VT2-2
+Added Pin To Net: NetName=GND Pin=VT2-3
+Added Pin To Net: NetName=NetR4_2 Pin=VT3-1
+Added Pin To Net: NetName=+12V Pin=VT3-2
+Added Pin To Net: NetName=-motor Pin=VT3-3
+Added Pin To Net: NetName=NetR5_2 Pin=VT4-1
+Added Pin To Net: NetName=-motor Pin=VT4-2
+Added Pin To Net: NetName=GND Pin=VT4-3
+Added Pin To Net: NetName=USART_RX Pin=X1-1
+Added Pin To Net: NetName=GND Pin=X1-2
+Added Pin To Net: NetName=USART_TX Pin=X1-3
+Added Pin To Net: NetName=+3.3V Pin=X2-1
+Added Pin To Net: NetName=GND Pin=X2-2
+Added Pin To Net: NetName=NetDD1_30 Pin=X2-3
+Added Pin To Net: NetName=NetDD1_29 Pin=X2-4
+Added Pin To Net: NetName=NetDD1_24 Pin=X3-1
+Added Pin To Net: NetName=GND Pin=X3-2
+Added Pin To Net: NetName=NetDD1_23 Pin=X3-3
+Added Pin To Net: NetName=NetC9_1 Pin=X4-1
+Added Pin To Net: NetName=GND Pin=X4-2
+Added Pin To Net: NetName=+12V Pin=X5-1
+Added Pin To Net: NetName=GND Pin=X5-2
+Added Pin To Net: NetName=+motor Pin=X6-1
+Added Pin To Net: NetName=-motor Pin=X6-2
+Added Member To Class: ClassName=Base_plate Member=Component C1 1ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C2 1ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C3 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C4 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C5 1ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C6 1ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C7 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C8 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C9 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C10 1000ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C11 1000ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C12 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C13 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C14 1000ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C15 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C16 220ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component C17 10ÏÍ‘
+Added Member To Class: ClassName=Base_plate Member=Component DA1 IR2104
+Added Member To Class: ClassName=Base_plate Member=Component DA2 IR2104
+Added Member To Class: ClassName=Base_plate Member=Component DD1 STM32F030K6T6
+Added Member To Class: ClassName=Base_plate Member=Component DD2 LM2596S
+Added Member To Class: ClassName=Base_plate Member=Component L1 Inductor
+Added Member To Class: ClassName=Base_plate Member=Component R1 430R
+Added Member To Class: ClassName=Base_plate Member=Component R2 Resistor
+Added Member To Class: ClassName=Base_plate Member=Component R3 Resistor
+Added Member To Class: ClassName=Base_plate Member=Component R4 Resistor
+Added Member To Class: ClassName=Base_plate Member=Component R5 Resistor
+Added Member To Class: ClassName=Base_plate Member=Component R6 430R
+Added Member To Class: ClassName=Base_plate Member=Component SW1 Button
+Added Member To Class: ClassName=Base_plate Member=Component VD1 SK34
+Added Member To Class: ClassName=Base_plate Member=Component VD2 SK34
+Added Member To Class: ClassName=Base_plate Member=Component VD3 SK34
+Added Member To Class: ClassName=Base_plate Member=Component VT1 IRF100B202
+Added Member To Class: ClassName=Base_plate Member=Component VT2 IRF100B202
+Added Member To Class: ClassName=Base_plate Member=Component VT3 IRF100B202
+Added Member To Class: ClassName=Base_plate Member=Component VT4 IRF100B202
+Added Member To Class: ClassName=Base_plate Member=Component X1 3pin
+Added Member To Class: ClassName=Base_plate Member=Component X2 4pin
+Added Member To Class: ClassName=Base_plate Member=Component X3 3pin
+Added Member To Class: ClassName=Base_plate Member=Component X4 2pin
+Added Member To Class: ClassName=Base_plate Member=Component X5 2pin
+Added Member To Class: ClassName=Base_plate Member=Component X6 2pin
+Added Room: Name=Base_plate

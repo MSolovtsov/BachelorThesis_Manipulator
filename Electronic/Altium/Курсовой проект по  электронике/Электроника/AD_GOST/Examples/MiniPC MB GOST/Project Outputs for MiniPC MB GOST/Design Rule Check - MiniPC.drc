@@ -1,0 +1,359 @@
+Protel Design System Design Rule Check
+PCB File : G:\Мой диск\Projects\MiniPC MB GOST до синхронизации платы\MiniPC MB GOST\MiniPC.PcbDoc
+Date     : 29.03.2019
+Time     : 10:54:18
+
+ERROR : More than 500 violations detected, DRC was stopped
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE2')),(InNetClass('DDR4_BYTELINE2'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE3')),(InNetClass('DDR4_BYTELINE3'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('DDR4_SODIMM_CK0')or InDifferentialPairClass('DDR4_SODIMM_CK1')or InDifferentialPairClass('DDR4_SODIMM_CK2')or InDifferentialPairClass('DDR4_SODIMM_CK3')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_ADDR/C/C')),(InNetClass('DDR4_ADDR/C/C'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE0')),(InNetClass('DDR4_SODIMM_BYTELINE0'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE1')),(InNetClass('DDR4_SODIMM_BYTELINE1'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('PCIE_85')or InNetClass('PCIE_Upr')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('DDR_CKL')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (WithinRoom('Room_SDRAM_1')or WithinRoom('Room_SDRAM_2')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('Room_U1')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (WithinRoom('Sheet_22_12V_POWER')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) ((InNetClass('DDR4_40') OR InDifferentialPairClass('DDR4_80'))),((InNetClass('DDR4_40') OR InDifferentialPairClass('DDR4_80')))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE1')),(InNetClass('DDR4_BYTELINE1'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE0')or InNetClass('DDR4_SODIMM_BYTELINE1') or InNetClass('DDR4_SODIMM_BYTELINE2') or InNetClass('DDR4_SODIMM_BYTELINE3') or InNetClass('DDR4_SODIMM_BYTELINE4') or InNetClass('DDR4_SODIMM_BYTELINE5') or InNetClass('DDR4_SODIMM_BYTELINE6') or InNetClass('DDR4_SODIMM_BYTELINE7') or InNetClass('DDR4_SODIMM_ADDR/C/C')or InNetClass('DDR4_BYTELINE0')or InNetClass('DDR4_BYTELINE1')or InNetClass('DDR4_BYTELINE2')or InNetClass('DDR4_BYTELINE3')or InNetClass('DDR4_ADDR/C/C')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('Sheet_6_Ethernet2')or WithinRoom('Sheet_5_Ethernet1')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE0')),(InNetClass('DDR4_BYTELINE0'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE2')),(InNetClass('DDR4_SODIMM_BYTELINE2'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) ((OnLayer('1_Top') and InNetClass('ENET_HPS'))),((OnLayer('1_Top') and InNetClass('ENET_HPS')))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('SFPA_RX')or InDifferentialPairClass('SFPA_TX')or InDifferentialPairClass('SFPB_RX')or InDifferentialPairClass('SFPB_TX')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('USB3')or InDifferentialPairClass('USB3_85')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) ((OnLayer('1_Top') and InNetClass('CLK_DIFF_PCIE'))),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('Sheet_15_DDR4_DIMM')or WithinRoom('Sheet_15_1_DDR4_SODIMM_2')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.09mm) (InAnyDifferentialPair),(InAnyDifferentialPair)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('ENET_HPS')),(InNetClass('ENET_HPS'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_ADDR/C/C')),(InNetClass('DDR4_SODIMM_ADDR/C/C'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE6')),(InNetClass('DDR4_SODIMM_BYTELINE6'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE5')),(InNetClass('DDR4_SODIMM_BYTELINE5'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE4')),(InNetClass('DDR4_SODIMM_BYTELINE4'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE3')),(InNetClass('DDR4_SODIMM_BYTELINE3'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE7')),(InNetClass('DDR4_SODIMM_BYTELINE7'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (not InAnyNet),(not InAnyNet)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.5mm) (Preferred=0.15mm) (WithinRoom('Sheet_22_12V_POWER')or WithinRoom('Sheet_24_12V_to_3V3')or WithinRoom('Sheet_26_3V3_to_1V8')or WithinRoom('Sheet_25_3V3_to_2V5')or WithinRoom('Sheet_27_12V_3V3_1V8_Swiches')or WithinRoom('Sheet_37_2.5V_and_1.8V_Switches')or WithinRoom('Sheet_39_3.3V_and_1.8V_Load')or WithinRoom('Sheet_38_3.3V_and_1.8V_Load')or WithinRoom('Sheet_33_3.3V_to_DDR4_VDD')or WithinRoom('Sheet_23_12V_to_5V')or WithinRoom('Sheet_28_12V_to_0V9')or WithinRoom('Sheet_31_3.3V_to_1.0V')or WithinRoom('Sheet_30_3.3V_to_0.9V')or WithinRoom('Sheet_29_3V3_to_0V9')or WithinRoom('Sheet_35_3.3V_to_VADJ'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.254mm) (Preferred=0.254mm) (InNetClass('ENET_HPS'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=0.3mm) (Preferred=0.25mm) (WithinRoom('Sheet_18_USB3.0'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=0.3mm) (Preferred=0.25mm) (WithinRoom('Sheet_12_Ethernet-HPS'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.25mm) (Preferred=0.2mm) (InNetClass('USB3'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.25mm) (Max=1mm) (Preferred=0.7mm) (InNet('PCIE_AUX3V3')or InNet('PCIE_DC_3V3')or InNet('3V3')or InNet('IO_5V'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.254mm) (Preferred=0.254mm) (InNetClass('PCIE_Upr'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.25mm) (Preferred=0.2mm) (WithinRoom('Sheet_6_Ethernet2')or WithinRoom('Sheet_5_Ethernet1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.5mm) (Preferred=0.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.25mm) (InNetClass('DDR4_40'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=0.6mm) (Preferred=0.25mm) (InNet('1.2V_DVDDL') or InNet('1.2V_AVDLL_PLL')or InNet('1.2V_AVDDL')or InNet('3.3V_AVDDH'))
+Rule Violations :0
+
+Processing Rule : Routing Layers(All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.4mm) (MaxWidth=0.7mm) (PreferedWidth=0.7mm) (WithinRoom('Sheet_24_12V_to_3V3')or WithinRoom('Sheet_26_3V3_to_1V8')or WithinRoom('Sheet_25_3V3_to_2V5')or WithinRoom('Sheet_27_12V_3V3_1V8_Swiches') or WithinRoom('Sheet_37_2.5V_and_1.8V_Switches')or WithinRoom('Sheet_39_3.3V_and_1.8V_Load')or WithinRoom('Sheet_38_3.3V_and_1.8V_Load')or WithinRoom('Sheet_33_3.3V_to_DDR4_VDD') or WithinRoom('Sheet_23_12V_to_5V')or WithinRoom('Sheet_28_12V_to_0V9')or WithinRoom('Sheet_31_3.3V_to_1.0V')or WithinRoom('Sheet_30_3.3V_to_0.9V')or WithinRoom('Sheet_29_3V3_to_0V9')or WithinRoom('Sheet_35_3.3V_to_VADJ'))
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.4mm) (MaxWidth=0.7mm) (PreferedWidth=0.4mm) (WithinRoom('Room_U1')or WithinRoom('RoomDefinition_U10')or WithinRoom('Sheet_9_Display_Port')or InDifferentialPairClass('SFPA_RX')or InDifferentialPairClass('SFPA_TX')OR InDifferentialPairClass('SFPB_RX') OR InDifferentialPairClass('SFPB_TX')or WithinRoom('Room_SDRAM_1')or WithinRoom('Room_SDRAM_2'))
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.3mm) (MaxWidth=0.7mm) (PreferedWidth=0.4mm) (All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.4mm) (MaxWidth=0.7mm) (PreferedWidth=0.5mm) (WithinRoom('Sheet_6_Ethernet2')or WithinRoom('Sheet_5_Ethernet1')or WithinRoom('Sheet_18_USB3.0')or WithinRoom('Sheet_21_PLL1'))
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.1mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.13mm) (Max=0.381mm) (Prefered=0.381mm) (InDifferentialPairClass('DDR4_80'))
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.12mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.09mm) (Max=0.381mm) (Prefered=0.381mm) (InDifferentialPairClass('All Differential Pairs'))
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.1mm) (Max=0.381mm) (Prefered=0.127mm)  and Width Constraints (Min=0.1mm) (Max=0.305mm) (Prefered=0.114mm) (InDifferentialPairClass('PCIE_85'))
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.1mm) (Max=0.381mm) (Prefered=0.127mm)  and Width Constraints (Min=0.1mm) (Max=0.305mm) (Prefered=0.114mm) (InDifferentialPairClass('USB3_85'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Pads and Vias to follow the Drill pairs settings
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.01mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.01mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.02mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=6mm) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Length Constraint (Min=106.2mm) (Max=106.4mm) (InNet (DDR4_SODIMM_ODT1) or InNet (DDR4_SODIMM_CS1) or InNet (DDR4_SODIMM_CKE1))
+Rule Violations :0
+
+Processing Rule : Length Constraint (Min=114mm) (Max=114.2mm) (InNet('DDR4_ALERT0')or InNet('DDR4_BG0'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.5mm) (InDifferentialPairClass('SFPA_RX')OR InDifferentialPairClass('SFPA_TX')OR InDifferentialPairClass('SFPB_RX') OR InDifferentialPairClass('SFPB_TX'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InxSignalClass('xSignals_J8_J20'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.2mm) (InxSignalClass('xSignals_U1_J8'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.1mm) (InDifferentialPairClass('DDR4_SODIMM_80'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.13mm) (InNetClass('PCIE_RX')or InNetClass('PCIE_TX')or InNetClass('PCIE_TX_C')or InNetClass('PCIE_CLK'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.2mm) (InNetClass('DDR4_BYTELINE0')or InNetClass('DDR4_BYTELINE1')or InNetClass('DDR4_BYTELINE2')or InNetClass('DDR4_BYTELINE3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.5mm) (InxSignalClass('xSignals_U11_U1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.2mm) (InxSignalClass('U14_U15'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('USB3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.2mm) (InDifferentialPairClass('DDR4_SODIMM_CK2') or InDifferentialPairClass('DDR4_SODIMM_CK3') or InNet (DDR4_SODIMM_ODT1) or InNet (DDR4_SODIMM_CS1) or InNet (DDR4_SODIMM_CKE1))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.2mm) (InxSignalClass('xSignal_U1_U14'))
+Rule Violations :0
+
+Processing Rule : Vias Under SMD Constraint (Allowed=Allowed) (All)
+Rule Violations :0
+
+Processing Rule : Vias Under SMD Constraint (Allowed=Allowed) (InPadClass('Class_Term'))
+Rule Violations :0
+
+Processing Rule : Max Via Stub Length (Back Drilling rule) (Max Stub Length = 0.3mm) (InNetClass('SFP'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_28_12V_to_0V9 (Bounding Region = (344.05mm, 238.525mm, 368.725mm, 265.925mm) (InComponentClass('Sheet_28_12V_to_0V9'))
+Rule Violations :0
+
+Processing Rule : Room AC2 (Bounding Region = (275.225mm, 207.2mm, 282.125mm, 216mm) (InComponentClass('AC2'))
+Rule Violations :0
+
+Processing Rule : Room AB20 (Bounding Region = (270.7mm, 164.2mm, 291.25mm, 204.1mm) (InComponentClass('AB20'))
+Rule Violations :0
+
+Processing Rule : Room AC11 (Bounding Region = (330.135mm, 187.9mm, 337.535mm, 199.91mm) (InComponentClass('AC11'))
+Rule Violations :0
+
+Processing Rule : Room AC12 (Bounding Region = (268.9mm, 223.4mm, 315.4mm, 265mm) (InComponentClass('AC12'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_27_12V_3V3_1V8_Swiches (Bounding Region = (351.505mm, 266.135mm, 370.005mm, 283.635mm) (InComponentClass('Sheet_27_12V_3V3_1V8_Swiches'))
+Rule Violations :0
+
+Processing Rule : Room AB19 (Bounding Region = (367.6mm, 258.2mm, 387.6mm, 325.2mm) (InComponentClass('AB19'))
+Rule Violations :0
+
+Processing Rule : Room AB31 (Bounding Region = (365.575mm, 218.5mm, 386.175mm, 237.331mm) (InComponentClass('AB31'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_25_3V3_to_2V5 (Bounding Region = (328mm, 300.1mm, 339.675mm, 311.1mm) (InComponentClass('Sheet_25_3V3_to_2V5'))
+Rule Violations :0
+
+Processing Rule : Room AB36 (Bounding Region = (218.3mm, 286.45mm, 230.4mm, 319.65mm) (InComponentClass('AB36'))
+Rule Violations :0
+
+Processing Rule : Room AB26 (Bounding Region = (327.8mm, 311.5mm, 341.87mm, 321.2mm) (InComponentClass('AB26'))
+Rule Violations :0
+
+Processing Rule : Room AB34 (Bounding Region = (337.5mm, 265.1mm, 350.4mm, 284.2mm) (InComponentClass('AB34'))
+Rule Violations :0
+
+Processing Rule : Room AB23 (Bounding Region = (342.9mm, 163.4mm, 359.9mm, 214.9mm) (InComponentClass('AB23'))
+Rule Violations :0
+
+Processing Rule : Room AB30 (Bounding Region = (247.25mm, 164.2mm, 267.8mm, 204.1mm) (InComponentClass('AB30'))
+Rule Violations :0
+
+Processing Rule : Room AB22 (Bounding Region = (270.2mm, 309.3mm, 327.8mm, 323.95mm) (InComponentClass('AB22'))
+Rule Violations :0
+
+Processing Rule : Room AB24 (Bounding Region = (362.2mm, 163.4mm, 379.2mm, 214.9mm) (InComponentClass('AB24'))
+Rule Violations :0
+
+Processing Rule : Room AB1 (Bounding Region = (294mm, 164.2mm, 311.4mm, 199.425mm) (InComponentClass('AB1'))
+Rule Violations :0
+
+Processing Rule : Room AB29 (Bounding Region = (219.887mm, 164.3mm, 245.5mm, 207.325mm) (InComponentClass('AB29'))
+Rule Violations :0
+
+Processing Rule : Room AB21 (Bounding Region = (317.4mm, 161.1mm, 336.55mm, 184.1mm) (InComponentClass('AB21'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_29_3V3_to_0V9 (Bounding Region = (215.639mm, 240.8mm, 227.3mm, 256.081mm) (InComponentClass('Sheet_29_3V3_to_0V9'))
+Rule Violations :0
+
+Processing Rule : Room AB32 (Bounding Region = (323.2mm, 234.1mm, 338mm, 242.9mm) (InComponentClass('AB32'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_16_DDR4 (Bounding Region = (322.1mm, 217.8mm, 341.6mm, 245.3mm) (InComponentClass('Sheet_16_DDR4'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_31_3.3V_to_1.0V (Bounding Region = (320.35mm, 285.8mm, 345.025mm, 299.91mm) (InComponentClass('Sheet_31_3.3V_to_1.0V'))
+Rule Violations :0
+
+Processing Rule : Room AB27 (Bounding Region = (237.6mm, 211mm, 254.1mm, 284.4mm) (InComponentClass('AB27'))
+Rule Violations :0
+
+Processing Rule : Room AB28 (Bounding Region = (229.2mm, 210.9mm, 241.8mm, 284.35mm) (InComponentClass('AB28'))
+Rule Violations :0
+
+Processing Rule : Room AB35 (Bounding Region = (323.2mm, 219.82mm, 338mm, 230.2mm) (InComponentClass('AB35'))
+Rule Violations :0
+
+Processing Rule : Room AB33 (Bounding Region = (315.06mm, 188.125mm, 329.06mm, 200.525mm) (InComponentClass('AB33'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_30_3.3V_to_0.9V (Bounding Region = (214.2mm, 258.76mm, 230.2mm, 280.2mm) (InComponentClass('Sheet_30_3.3V_to_0.9V'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_23_12V_to_5V (Bounding Region = (369.079mm, 238.515mm, 386.874mm, 258.75mm) (InComponentClass('Sheet_23_12V_to_5V'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_33_3.3V_to_DDR4_VDD (Bounding Region = (214.495mm, 216.35mm, 230.495mm, 237.79mm) (InComponentClass('Sheet_33_3.3V_to_DDR4_VDD'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_26_3V3_to_1V8 (Bounding Region = (345.525mm, 284.09mm, 370.2mm, 298.2mm) (InComponentClass('Sheet_26_3V3_to_1V8'))
+Rule Violations :0
+
+Processing Rule : Room Sheet_24_12V_to_3V3 (Bounding Region = (340.1mm, 299.425mm, 367.6mm, 321.025mm) (InComponentClass('Sheet_24_12V_to_3V3'))
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponentClass('Sheet_15_1_DDR4_SODIMM_2')),(InComponentClass('Sheet_15_DDR4_DIMM')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.1mm, Vertical Gap = 0.1mm ) (InComponentClass('Sheet_40_Arria10_Power')),(InComponentClass('Sheet_40_Arria10_Power')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=40mm) (Prefered=10mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Waived Violations : 0
+Time Elapsed        : 00:00:18

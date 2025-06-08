@@ -1,0 +1,737 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">29.03.2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:54:18</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:18</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///G:\%D0%9C%D0%BE%D0%B9 %D0%B4%D0%B8%D1%81%D0%BA\Projects\MiniPC MB GOST %D0%B4%D0%BE %D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8 %D0%BF%D0%BB%D0%B0%D1%82%D1%8B\MiniPC MB GOST\MiniPC.PcbDoc" class="file"><acronym title="G:\Мой диск\Projects\MiniPC MB GOST до синхронизации платы\MiniPC MB GOST\MiniPC.PcbDoc">G:\Мой диск\Projects\MiniPC MB GOST до синхронизации платы\MiniPC MB GOST\MiniPC.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+</table>
+</td>
+</table>
+<p class="error">ERROR : More than 500 violations detected, DRC was stopped</p><a name="IDIG1SVC4MNCPFHDUZTAL1CAJ5VCBST2X3YJLYOGFDCCPIAHFF1WEF"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKHP2NYXJJHHMKBD0YCD5SUGAHE10HMMP5Q4FI4OWF0AS4M3ZF01J">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE2')),(InNetClass('DDR4_BYTELINE2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGZYZYIXWA5H2GJ4FZCATWV54DNW1TBS1RSUV1PJHRAYBWDESLZOE">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE3')),(InNetClass('DDR4_BYTELINE3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNPHPA3BV4PLSPH231A2VJRGDMFTFOJ03MHKOCSO4CWS0L34MAJVL">Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('DDR4_SODIMM_CK0')or InDifferentialPairClass('DDR4_SODIMM_CK1')or InDifferentialPairClass('DDR4_SODIMM_CK2')or InDifferentialPairClass('DDR4_SODIMM_CK3')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUU2CWIXDEJ4MB2UGSWCECUOW1MQKQERUUBH4HWGJJSMXQ4EOINND">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_ADDR/C/C')),(InNetClass('DDR4_ADDR/C/C'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEK0X0NJE44GOJSR5LR2ZNG4NXJKGK5N24C15HKO4Q5IHLYUP3HAD">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE0')),(InNetClass('DDR4_SODIMM_BYTELINE0'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZVA0BDKKUJ0LJN3WOVVEDSKAWH3UCAWBDEOOTOGLXX1NZE5SEMZO">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE1')),(InNetClass('DDR4_SODIMM_BYTELINE1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEFJ4NZOZZQMLFVMNKWSXHDYZ4DFMUEPZB4GHS4BBJI2HQXFBPX3D">Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('PCIE_85')or InNetClass('PCIE_Upr')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID032DLO0LIJI2MCS232UEP4OXGMBJBQHOSDAHBROTHDQHTPNGCKHI">Clearance Constraint (Gap=0.15mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDJM3GIIVL5ZJJ30W4VWSLGFGWCYC41E3KIVBTZKPOUE13YKWXNHJ">Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('DDR_CKL')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNXXTSLMJ2RVNKW3VWR5M5HFT1PMOWCUAEXFL0YDDCX4KVB3GCSOI">Clearance Constraint (Gap=0.15mm) (WithinRoom('Room_SDRAM_1')or WithinRoom('Room_SDRAM_2')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT2WD5SEAIJERNQM4Y32EEPAFDKBKDEPADXNCVCHNMQKDRXGE3RW">Clearance Constraint (Gap=0.1mm) (WithinRoom('Room_U1')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJPKZAVLSXWU4CDY1LL4U1T2VVMTMXDDBR0KPQCEQPZFY05BLJMF">Clearance Constraint (Gap=0.15mm) (WithinRoom('Sheet_22_12V_POWER')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWGLQ1PPI4S0IGTX3SGVI54ZHQJ1WTM3IGABLPQGRN0QYLP0OAMTI">Clearance Constraint (Gap=0.15mm) ((InNetClass('DDR4_40') OR InDifferentialPairClass('DDR4_80'))),((InNetClass('DDR4_40') OR InDifferentialPairClass('DDR4_80')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2E4UBTDSB243EWPXQ5N2IECQQARDWUFXVBYDIHT3YKW2I3SFMAM">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE1')),(InNetClass('DDR4_BYTELINE1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT4YRFMANGIXSPZML3OTYTFXI3UUGFDOUQMAMVJDUBCY2CUBA5LL">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE0')or InNetClass('DDR4_SODIMM_BYTELINE1') or InNetClass('DDR4_SODIMM_BYTELINE2') or InNetClass('DDR4_SODIMM_BYTELINE3') or InNetClass('DDR4_SODIMM_BYTELINE4') or InNetClass('DDR4_SODIMM_BYTELINE5') or InNetClass('DDR4_SODIMM_BYTELINE6') or InNetClass('DDR4_SODIMM_BYTELINE7') or InNetClass('DDR4_SODIMM_ADDR/C/C')or InNetClass('DDR4_BYTELINE0')or InNetClass('DDR4_BYTELINE1')or InNetClass('DDR4_BYTELINE2')or InNetClass('DDR4_BYTELINE3')or InNetClass('DDR4_ADDR/C/C')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLI0BKW4CCGLYDXUZ3HAETPRHSOXKSDNPIWJ1BSBXVRSNB11MXKXM">Clearance Constraint (Gap=0.1mm) (WithinRoom('Sheet_6_Ethernet2')or WithinRoom('Sheet_5_Ethernet1')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDK12Z1A52MYUVCBAG1ESP2PMWXTSA0VITTTESQFQDWC0DSWOBV">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_BYTELINE0')),(InNetClass('DDR4_BYTELINE0'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDE45S1ETAB2LVDO33YLMIZWTDRLG0ZMBL3GY2FKEGHHVTZD22YMKO">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE2')),(InNetClass('DDR4_SODIMM_BYTELINE2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEFQPK3C5VMYDE2NTXBMXZMCK5GVIOVHMA4SETUI40HWH3BDE12HI">Clearance Constraint (Gap=0.15mm) ((OnLayer('1_Top') and InNetClass('ENET_HPS'))),((OnLayer('1_Top') and InNetClass('ENET_HPS')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIRYLRV2R3QRGCVCLHZW3UX3WLIU10FZIMGCVONKSPLM4R4QSMBSB">Clearance Constraint (Gap=0.15mm) (InDifferentialPairClass('SFPA_RX')or InDifferentialPairClass('SFPA_TX')or InDifferentialPairClass('SFPB_RX')or InDifferentialPairClass('SFPB_TX')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM1GHV3E5K3JBCFC3QRJ2FNOYXB0VER1GSNQJADOFT42BXRJVVW4J">Clearance Constraint (Gap=0.15mm) (InNetClass('USB3')or InDifferentialPairClass('USB3_85')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDX2SFRJ2JDB0DI5MY25F2HKBGAD5E5ZKJ5O0ILYN2RM1YM1LTZEME">Clearance Constraint (Gap=0.15mm) ((OnLayer('1_Top') and InNetClass('CLK_DIFF_PCIE'))),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTQ2PLZJDB1BJBI54RCNO1IAHSELOKH0WMDAG4LLJZHFEMBMHXH1C">Clearance Constraint (Gap=0.1mm) (WithinRoom('Sheet_15_DDR4_DIMM')or WithinRoom('Sheet_15_1_DDR4_SODIMM_2')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKGCZXQEZ3CLQF5MA4RAMKNFNFDJ3LIOCTYV023ETBMUE4PTA2SJG">Clearance Constraint (Gap=0.09mm) (InAnyDifferentialPair),(InAnyDifferentialPair)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3WKEPEYRX3EKFTFFLROQQAA1EONNUDQWP0RK4KD41VHEJAGKYJAH">Clearance Constraint (Gap=0.15mm) (InNetClass('ENET_HPS')),(InNetClass('ENET_HPS'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSTH1J3XHRM4XP2IQ2EICZ4EPZJLV5IDZPOM3CFHG1YTLBEKV13YB">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_ADDR/C/C')),(InNetClass('DDR4_SODIMM_ADDR/C/C'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCEQRKIEFSGKYMZSDGRGMASAG1EFA2TGR4TTQ5VD5WRPYGKDABY1K">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE6')),(InNetClass('DDR4_SODIMM_BYTELINE6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUDGRCC0AOEYAP1H2TZILMPZM0NGP5RZQUEU510KJMYFMA01MIIQO">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE5')),(InNetClass('DDR4_SODIMM_BYTELINE5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDDPDQRL1BAZ4I1WFZZFWK4CRSIHJ4BCLYDBBAGE14XCOCEFR2VUL">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE4')),(InNetClass('DDR4_SODIMM_BYTELINE4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDM12014BMZAC5EVJO32PQEWIG3OHP0C0WBBNCNAGTIJ3JDQJVWYSJ">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE3')),(InNetClass('DDR4_SODIMM_BYTELINE3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNSJ205PASVFEDBM1KDWUSKHS4OMX5FFBYJQXIKMTEICEFFAV00PE">Clearance Constraint (Gap=0.15mm) (InNetClass('DDR4_SODIMM_BYTELINE7')),(InNetClass('DDR4_SODIMM_BYTELINE7'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVWJWIJSOPP1HDCIWCMEJL43BB2SYBBN3E0KYTO5BRJNNKJ5SPNH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCBCJM0CSXNZ1O1LLASGHLVU4QOM2TRK5EZIXLMK3ARIZVCYNP5WM">Short-Circuit Constraint (Allowed=Yes) (not InAnyNet),(not InAnyNet)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHM1NSX1KCLAXJKL2DUMAKNEDAL0TFNCRFQ1ARYLK1VGFOWIW2EOL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD20505GTHCQ0BV0FHEKV3052ROBL3EJKE45LMCHF130NFUMDDQRF">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCUOZKPBOQGT1HOB1DNF42KQXZFXVSX55KN2HSYMQRRQCTNOZFV2H">Width Constraint (Min=0.1mm) (Max=0.5mm) (Preferred=0.15mm) (WithinRoom('Sheet_22_12V_POWER')or WithinRoom('Sheet_24_12V_to_3V3')or WithinRoom('Sheet_26_3V3_to_1V8')or WithinRoom('Sheet_25_3V3_to_2V5')or WithinRoom('Sheet_27_12V_3V3_1V8_Swiches')or WithinRoom('Sheet_37_2.5V_and_1.8V_Switches')or WithinRoom('Sheet_39_3.3V_and_1.8V_Load')or WithinRoom('Sheet_38_3.3V_and_1.8V_Load')or WithinRoom('Sheet_33_3.3V_to_DDR4_VDD')or WithinRoom('Sheet_23_12V_to_5V')or WithinRoom('Sheet_28_12V_to_0V9')or WithinRoom('Sheet_31_3.3V_to_1.0V')or WithinRoom('Sheet_30_3.3V_to_0.9V')or WithinRoom('Sheet_29_3V3_to_0V9')or WithinRoom('Sheet_35_3.3V_to_VADJ'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHD3RX40Q10DEJRIRSFMH0KKDEB3HUP13TPSOLPNHMBKPE11QHZFI">Width Constraint (Min=0.1mm) (Max=0.254mm) (Preferred=0.254mm) (InNetClass('ENET_HPS'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDB42VSP3IJKESLQW3LI4YBHJ2ELOL4CQAI4YJJHKOC1OHUL51KKE">Width Constraint (Min=0.2mm) (Max=0.3mm) (Preferred=0.25mm) (WithinRoom('Sheet_18_USB3.0'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRYDZSWR4KFPKGZFJTNGU1UMA4IWEHVBTIFN43NMNGHW0JIMYCRKD">Width Constraint (Min=0.2mm) (Max=0.3mm) (Preferred=0.25mm) (WithinRoom('Sheet_12_Ethernet-HPS'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID44UYUFBXMBN2OATQ5VWWY5CZBNKZSDXEUIPHMJC2SEBH4MEPAKDL">Width Constraint (Min=0.1mm) (Max=0.25mm) (Preferred=0.2mm) (InNetClass('USB3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNJWI4JY0PCQKCJFZAAY4VSQM1LKSCMS4N2VLNKPE1XV5LCYUDARM">Width Constraint (Min=0.25mm) (Max=1mm) (Preferred=0.7mm) (InNet('PCIE_AUX3V3')or InNet('PCIE_DC_3V3')or InNet('3V3')or InNet('IO_5V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDANOHIQQ4A212BDM3TFVFD05YC02M425AESCDJLVZJXDDEUGSZDG">Width Constraint (Min=0.1mm) (Max=0.254mm) (Preferred=0.254mm) (InNetClass('PCIE_Upr'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRSI5OLRGM0ZSHGVYY1WSIYUXN5WOF0VKOTOIIFMLWUOT4WKRBD">Width Constraint (Min=0.1mm) (Max=0.25mm) (Preferred=0.2mm) (WithinRoom('Sheet_6_Ethernet2')or WithinRoom('Sheet_5_Ethernet1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5MDZ2BIDXOAMLQQEAE04TK3RN2G1T22OT5RZEPKI0XKHVBUOZ4C">Width Constraint (Min=0.1mm) (Max=0.5mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLRCBVJXDY0OAL05W4T2DCO0RAFKWKTMAE34TLZKKFZHKJYZIX45K">Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.25mm) (InNetClass('DDR4_40'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDH1H42ZYMGVCFPRFV4LPZWMI0RKGS3AIT0XFIDWMR53424SPQR5HG">Width Constraint (Min=0.2mm) (Max=0.6mm) (Preferred=0.25mm) (InNet('1.2V_DVDDL') or InNet('1.2V_AVDLL_PLL')or InNet('1.2V_AVDDL')or InNet('3.3V_AVDDH'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCOTVP5X2KQUAKFG0YTFO2YKJHM2C00NRKYEANXIIG3FYYVZDLAUJ">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBLRYHVZJU4KDMVIMQVDD43EA1MEXDLEZXTSBJAIMPLSVIQEQ5EPD">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.4mm) (MaxWidth=0.7mm) (PreferedWidth=0.7mm) (WithinRoom('Sheet_24_12V_to_3V3')or WithinRoom('Sheet_26_3V3_to_1V8')or WithinRoom('Sheet_25_3V3_to_2V5')or WithinRoom('Sheet_27_12V_3V3_1V8_Swiches') or WithinRoom('Sheet_37_2.5V_and_1.8V_Switches')or WithinRoom('Sheet_39_3.3V_and_1.8V_Load')or WithinRoom('Sheet_38_3.3V_and_1.8V_Load')or WithinRoom('Sheet_33_3.3V_to_DDR4_VDD') or WithinRoom('Sheet_23_12V_to_5V')or WithinRoom('Sheet_28_12V_to_0V9')or WithinRoom('Sheet_31_3.3V_to_1.0V')or WithinRoom('Sheet_30_3.3V_to_0.9V')or WithinRoom('Sheet_29_3V3_to_0V9')or WithinRoom('Sheet_35_3.3V_to_VADJ'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2D5LMWHUWSTLIDEE4UHJ0BYMBIY0HWYJRNV55NF3KULPFZ1UG4XL">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.4mm) (MaxWidth=0.7mm) (PreferedWidth=0.4mm) (WithinRoom('Room_U1')or WithinRoom('RoomDefinition_U10')or WithinRoom('Sheet_9_Display_Port')or InDifferentialPairClass('SFPA_RX')or InDifferentialPairClass('SFPA_TX')OR InDifferentialPairClass('SFPB_RX') OR InDifferentialPairClass('SFPB_TX')or WithinRoom('Room_SDRAM_1')or WithinRoom('Room_SDRAM_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2XBP4BRO1M4TFJBQ0JTVXOQSRMA5XNRX5CJLYKOQTLLPBICE5RD">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.3mm) (MaxWidth=0.7mm) (PreferedWidth=0.4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKT0T1L1LUZELMUB34XARVKPRSO3WUBOY3YRGQCJ24TS3PTUXBVIP">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.4mm) (MaxWidth=0.7mm) (PreferedWidth=0.5mm) (WithinRoom('Sheet_6_Ethernet2')or WithinRoom('Sheet_5_Ethernet1')or WithinRoom('Sheet_18_USB3.0')or WithinRoom('Sheet_21_PLL1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXN0WLKTNYISKBTQWHLRVIMDLYPX5NVGMFHJTSMCUC2PENA33NYPN">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.1mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.13mm) (Max=0.381mm) (Prefered=0.381mm) (InDifferentialPairClass('DDR4_80'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0LNBHZAASJ1UTUMCAJIIEXTCC00GSLJMONZEBLW12N0TME2A4VG">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.12mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.09mm) (Max=0.381mm) (Prefered=0.381mm) (InDifferentialPairClass('All Differential Pairs'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDJHUOB0DKU1HKTJU43PWUCG4WMI1QJ2U4XWOPOFBLQIFOT1PMOWC">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.1mm) (Max=0.381mm) (Prefered=0.127mm)  and Width Constraints (Min=0.1mm) (Max=0.305mm) (Prefered=0.114mm) (InDifferentialPairClass('PCIE_85'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOS1YG5LWX2MYGULA0EVTE3NAPPCVCQBGASIM0QMA2G44FCV4OCKH">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.1mm) (Max=0.381mm) (Prefered=0.127mm)  and Width Constraints (Min=0.1mm) (Max=0.305mm) (Prefered=0.114mm) (InDifferentialPairClass('USB3_85'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1SUOV5P15VTAB101X23WVWCTXNKAZW5WFUMJFBF0OSGOCV15PAJG">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUMOJ3DJOAYAECLPXKED2PF2BYIHILMN2NTUPHADTUADX2B3JPNME">Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDW3KF0Y2ZZYZSGT2XQUXCMPZ1SDVA4LYNATB2N3I4ADELPTWAIRVG">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID55U5XFZIYXT4GQHXHB0ENWPJBGC3WTSNCT21HWLTJ23IYLEM2JOF">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQODRLUF5MYLXPOCY4RRRUJQOOMNVBXOKN5SOCHNLPRZKFBCYFPDO">Minimum Solder Mask Sliver (Gap=0.01mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUBXKZRZ3HY4BIXDIXQP301F3FDRTWSH05XHN3PKCCUUJQM1AI3CK">Silk To Solder Mask (Clearance=0.01mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNQ1E2ZPUMDPBDC1VAQC5OXIWWNFDGNVFK5S1YJGASKH4KHTTGR3I">Silk to Silk (Clearance=0.02mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYIXMJG5S3TCJLLWUNJR243YG3JBC2QCMA3QFNTJJFNVWNVOUTRMJ">Net Antennae (Tolerance=6mm) (Disabled)(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPFXX1CDSJW1JDE3MIB0BDUXXYFLDBEBSXKXL24KKRSAXQ1WW10PN">Length Constraint (Min=106.2mm) (Max=106.4mm) (InNet (DDR4_SODIMM_ODT1) or InNet (DDR4_SODIMM_CS1) or InNet (DDR4_SODIMM_CKE1))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID03E0ZGKIXJ0HO1IPZDYRIGH1DGTMKNC4GVELVKER5JFD3XW4BLO">Length Constraint (Min=114mm) (Max=114.2mm) (InNet('DDR4_ALERT0')or InNet('DDR4_BG0'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKHVSDUIHYN24BOBN0KRJGH415J32NVJIVV4JRLMIZUXENUSKIQXF">Matched Lengths(Tolerance=0.5mm) (InDifferentialPairClass('SFPA_RX')OR InDifferentialPairClass('SFPA_TX')OR InDifferentialPairClass('SFPB_RX') OR InDifferentialPairClass('SFPB_TX'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGXAOCHQFHC5PN51HRN5GHAGJRB0KT0YZSUNQBSCUYWZVIX5E32OJ">Matched Lengths(Tolerance=1mm) (InxSignalClass('xSignals_J8_J20'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZUVYWMKGGQJHFQNDHJYMIISU5OVQKPD4GGFIQSLVR2UKWUFBOXEK">Matched Lengths(Tolerance=0.2mm) (InxSignalClass('xSignals_U1_J8'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ5RMCNAWJTTLLNR5LHCEXVWFFIQ0PIV5FAOHBCPMVLGIWZCVDCNI">Matched Lengths(Tolerance=0.1mm) (InDifferentialPairClass('DDR4_SODIMM_80'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDG4UAS2NS2ABRCB1J2IGS1UET2JGIIXHJGRICWEPYZPJZTT5GHMRI">Matched Lengths(Tolerance=0.13mm) (InNetClass('PCIE_RX')or InNetClass('PCIE_TX')or InNetClass('PCIE_TX_C')or InNetClass('PCIE_CLK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYMKS1FUTJ4GHDPAUYTNTH45GTD5C2H155FOFJIPXJBIUADGOWUUB">Matched Lengths(Tolerance=0.2mm) (InNetClass('DDR4_BYTELINE0')or InNetClass('DDR4_BYTELINE1')or InNetClass('DDR4_BYTELINE2')or InNetClass('DDR4_BYTELINE3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOD3NSDPXTPQRHZ3FLMPSFMITUJEJVPCI3S45JLDISYNJJIXAXHEB">Matched Lengths(Tolerance=0.5mm) (InxSignalClass('xSignals_U11_U1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQQG1KZZHXGYRPL3GVCOEN4GGSD2HU1PMQG0WOFJNEZ2CFXNW5LNE">Matched Lengths(Tolerance=0.2mm) (InxSignalClass('U14_U15'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNTBJPQCE03FPRUZ5EDF31SEEC5OK3D1JDIW3UK0ZMV1TH5L3FQJ">Matched Lengths(Tolerance=1mm) (InNetClass('USB3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPW4JBC5QO55EOVZSNSA2FZUJ3DORPIC5PMO1LTB1DLUEQ5HQWGZN">Matched Lengths(Tolerance=0.2mm) (InDifferentialPairClass('DDR4_SODIMM_CK2') or InDifferentialPairClass('DDR4_SODIMM_CK3') or InNet (DDR4_SODIMM_ODT1) or InNet (DDR4_SODIMM_CS1) or InNet (DDR4_SODIMM_CKE1))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOAHQIMV5QCVPLVMF5SB4SPHXBJUSMSEP2L1PYRNGSCZYCMTHUCME">Matched Lengths(Tolerance=0.2mm) (InxSignalClass('xSignal_U1_U14'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1AE5U0BT2MVBKNCBGYTY4L1CWBXHMMWPURZKBPNAEUGHHOLVUGSL">Vias Under SMD Constraint (Allowed=Allowed) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPGNM1CTJLYESN1MIRHWWOL5B1OBKLZDTE3XPUCEOLSY5VWKGA4DP">Vias Under SMD Constraint (Allowed=Allowed) (InPadClass('Class_Term'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGOP311W3SHLEB0FXCDUKZSL4LDJ0PUHYKYIESCKTHQN04XYKMIVI">Max Via Stub Length (Back Drilling rule) (Max Stub Length = 0.3mm) (InNetClass('SFP'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTUZBKMDMQE1BFXQEBC5JTIYTCPQAVE0NZPBRFPE10E2KUAYZMRVJ">Room Sheet_28_12V_to_0V9 (Bounding Region = (344.05mm, 238.525mm, 368.725mm, 265.925mm) (InComponentClass('Sheet_28_12V_to_0V9'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2BKJG0ZHF51TJUUYT30OM2X1QCKT0SZQVICYLJN5QC3MAUZN0FTN">Room AC2 (Bounding Region = (275.225mm, 207.2mm, 282.125mm, 216mm) (InComponentClass('AC2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEB35LOFHVMG2OQWDBZTFAJLTHMZF2K2PDVUVYJDXPM0GEF50LRVP">Room AB20 (Bounding Region = (270.7mm, 164.2mm, 291.25mm, 204.1mm) (InComponentClass('AB20'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHKRXNLK0S1RIN1NFO3PRQP4BYPD1KQ1YQLMG0KI0N4U2LQY2XAFF">Room AC11 (Bounding Region = (330.135mm, 187.9mm, 337.535mm, 199.91mm) (InComponentClass('AC11'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMWWSRXBK4YCUFUZJY2FZI4UNSKT2URBSUQCCEPJZ2AVRBRAAZTPB">Room AC12 (Bounding Region = (268.9mm, 223.4mm, 315.4mm, 265mm) (InComponentClass('AC12'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHUOBQ0QGU53HDS2MCHHHOTNDAIJITUS1GAP31OMN34EFNV1NLL4D">Room Sheet_27_12V_3V3_1V8_Swiches (Bounding Region = (351.505mm, 266.135mm, 370.005mm, 283.635mm) (InComponentClass('Sheet_27_12V_3V3_1V8_Swiches'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTBTNV1LCLTTFBPMG0XORA2XFBHTGAUDX3DU5X1DKOGBL5RLVHBCI">Room AB19 (Bounding Region = (367.6mm, 258.2mm, 387.6mm, 325.2mm) (InComponentClass('AB19'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXONNXA32RXKUSXLJXQQS1DQEHW0DRTKJ5WAIFCFZO0Y3FJXXHJJ">Room AB31 (Bounding Region = (365.575mm, 218.5mm, 386.175mm, 237.331mm) (InComponentClass('AB31'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJQXULUSXPJYGMUUHU3550OFS0ELMCJLSAPBDTAHBGACPBUSM0PGM">Room Sheet_25_3V3_to_2V5 (Bounding Region = (328mm, 300.1mm, 339.675mm, 311.1mm) (InComponentClass('Sheet_25_3V3_to_2V5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDF3XRFOOSYYQGDGPAGTN3F4QJNBRL5WAI2HQNGREWKB50KDA5WO5E">Room AB36 (Bounding Region = (218.3mm, 286.45mm, 230.4mm, 319.65mm) (InComponentClass('AB36'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVHPJQSXWX0UFPJ2OURHXTZ40ZM0DGI0SQWJNH0LHXBF4NEHTDPBC">Room AB26 (Bounding Region = (327.8mm, 311.5mm, 341.87mm, 321.2mm) (InComponentClass('AB26'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUEQ1G35ES2WIIRYBJ03MWL52QI3ITWZS4MU2O0DUTUHUFRBDUDVE">Room AB34 (Bounding Region = (337.5mm, 265.1mm, 350.4mm, 284.2mm) (InComponentClass('AB34'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLROIBBHD320IF2QM1COJNSN4BKD0SALZPVMMTIGI5LAFDUN3AIH">Room AB23 (Bounding Region = (342.9mm, 163.4mm, 359.9mm, 214.9mm) (InComponentClass('AB23'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBZLLNLYBF5I1PJNAM4ZLGBH0ZDCRNBD14LEV4PENQE0UJPTNWJWO">Room AB30 (Bounding Region = (247.25mm, 164.2mm, 267.8mm, 204.1mm) (InComponentClass('AB30'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEPK4DRY3ACC3D000CQBTE5EXYNAIOF4AFQDZOXO44T2NBYQTLQ">Room AB22 (Bounding Region = (270.2mm, 309.3mm, 327.8mm, 323.95mm) (InComponentClass('AB22'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDPU5EXVATZBCBOKE3KGSGQNHPHQOHKL2L3PYWLGERYYBFHJI5HH">Room AB24 (Bounding Region = (362.2mm, 163.4mm, 379.2mm, 214.9mm) (InComponentClass('AB24'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQLYO0LOCTHWKCWAPJ2HHQEFJTBMG0NC4AEAM51MP3FLIMY5AMSTI">Room AB1 (Bounding Region = (294mm, 164.2mm, 311.4mm, 199.425mm) (InComponentClass('AB1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBZ1FJ1LL0522LSHU24NJRZNTUJACEIUXMDYQLLNI3GHRML1PDATF">Room AB29 (Bounding Region = (219.887mm, 164.3mm, 245.5mm, 207.325mm) (InComponentClass('AB29'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN3TNY4ZTQCTSGIZDLQOIHCJFYPIDBGD1TYHRGMFBPZAF21LMEXID">Room AB21 (Bounding Region = (317.4mm, 161.1mm, 336.55mm, 184.1mm) (InComponentClass('AB21'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTXWN1RMFKZLLOW34OBV35PT5VG15ENMWVYEZDCFNTWEAPLGTC0AH">Room Sheet_29_3V3_to_0V9 (Bounding Region = (215.639mm, 240.8mm, 227.3mm, 256.081mm) (InComponentClass('Sheet_29_3V3_to_0V9'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLDY4U2FWWFXNFCZH4Q4NHCL3WXRLHJBFADVKVJ4CR0YNZOWAB3N">Room AB32 (Bounding Region = (323.2mm, 234.1mm, 338mm, 242.9mm) (InComponentClass('AB32'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4W31UHFMH1JFGWJJP0YWR1YKSGN4LQNYNMAZFYN0GZWGLAUYFVVE">Room Sheet_16_DDR4 (Bounding Region = (322.1mm, 217.8mm, 341.6mm, 245.3mm) (InComponentClass('Sheet_16_DDR4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0HP4XZDT3L3GNEV25N05J5NLTI3DHMCXQNOBITGF5SVQ2OQC4L1K">Room Sheet_31_3.3V_to_1.0V (Bounding Region = (320.35mm, 285.8mm, 345.025mm, 299.91mm) (InComponentClass('Sheet_31_3.3V_to_1.0V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYTJSYLMV4FVFDZK0ZNRAA4XGPJVV3DQID4XPZTII3BITHTDLNYYP">Room AB27 (Bounding Region = (237.6mm, 211mm, 254.1mm, 284.4mm) (InComponentClass('AB27'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4IP353CR5QV2X20G4L4CM1UMLPFFJRJDAQKM5EQRLDACP5SPKAB">Room AB28 (Bounding Region = (229.2mm, 210.9mm, 241.8mm, 284.35mm) (InComponentClass('AB28'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPJ5MLDPKHZ3JIS1MAXZEXLCDUDJMIIGHBG1SABOKNMAVYB11LDY">Room AB35 (Bounding Region = (323.2mm, 219.82mm, 338mm, 230.2mm) (InComponentClass('AB35'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5VDIV3VLSL4APF2G1JGOBDJ0OJ4QWF10YLKXGGCRO2QDAAX3EHRG">Room AB33 (Bounding Region = (315.06mm, 188.125mm, 329.06mm, 200.525mm) (InComponentClass('AB33'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUSHVFIMXY00LLLTL4K4J1VQ2AI2TMNNQBG4VBGJHNKMUWSKKEQ4B">Room Sheet_30_3.3V_to_0.9V (Bounding Region = (214.2mm, 258.76mm, 230.2mm, 280.2mm) (InComponentClass('Sheet_30_3.3V_to_0.9V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDL2ROSPRRC2BBLWWB4O4POQLU0MFETO1MJN0U4MHR5Z4WLUVFTZTJ">Room Sheet_23_12V_to_5V (Bounding Region = (369.079mm, 238.515mm, 386.874mm, 258.75mm) (InComponentClass('Sheet_23_12V_to_5V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTRAIGWCYEB0FCVACDRV0C2LPTO4RSROBJHXHZBLBOY4OXNP0O3WF">Room Sheet_33_3.3V_to_DDR4_VDD (Bounding Region = (214.495mm, 216.35mm, 230.495mm, 237.79mm) (InComponentClass('Sheet_33_3.3V_to_DDR4_VDD'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2JMJTZJ4RVEZMH0WYMX1UIXFBEJ3JH4U43LKRNH1KHLB1ZHAEJM">Room Sheet_26_3V3_to_1V8 (Bounding Region = (345.525mm, 284.09mm, 370.2mm, 298.2mm) (InComponentClass('Sheet_26_3V3_to_1V8'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUJKEMBPBHHEILTWJDX2KYUB2MN5WV135VMRXUHBDKARHF433NTMN">Room Sheet_24_12V_to_3V3 (Bounding Region = (340.1mm, 299.425mm, 367.6mm, 321.025mm) (InComponentClass('Sheet_24_12V_to_3V3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQN10IMBB3BYEDKC4WD4FV223Z2CM3FNBECB55MJRHZPZ0PNUDLG">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponentClass('Sheet_15_1_DDR4_SODIMM_2')),(InComponentClass('Sheet_15_DDR4_DIMM')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWIUPWM1MFWQLJKAXBEFUAFTA2CHHKRL1HVTGRIGFEHFM3VBBFN1F">Component Clearance Constraint ( Horizontal Gap = 0.1mm, Vertical Gap = 0.1mm ) (InComponentClass('Sheet_40_Arria10_Power')),(InComponentClass('Sheet_40_Arria10_Power')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEAEKJ20333SDKPNCSGZRPO5JBINRYAVWVNGW2WKWM1Y11SACLTD">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB1MOECCAIHWDCLU0MM4MG2YSWILX0DNI2SQ0SHKXXF3BFOEDUZOB">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTWWT2XGDUSM4MQ3H0FGA21ZOID00KYGSLZMVMQIMXBUYNVCKWMMH">Height Constraint (Min=0mm) (Max=40mm) (Prefered=10mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br></body>
+</html>

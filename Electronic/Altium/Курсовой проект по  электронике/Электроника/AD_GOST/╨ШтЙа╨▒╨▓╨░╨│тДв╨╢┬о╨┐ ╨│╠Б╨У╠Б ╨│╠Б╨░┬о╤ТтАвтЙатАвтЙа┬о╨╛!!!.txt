@@ -1,0 +1,17 @@
+Для формирования КД в соответствии с требованиями ГОСТ, после установки программы Altium Designer необходимо выполнить ряд настроек системы*:
+
+1. Закачайте архив "AD_GOST"
+2. Распакуйте архив по пути c:\Users\Public\Documents\Altium\AD_GOST\
+3. Загрузите настройки Preferences (файл *dxpprf)
+4. Загрузите настройки Default Sch и Default Pcb (dftGOST.dft)
+
+Обновленные настройки позволят сразу проектировать с форматами листов и их основной надписью
+в соответствии с требованиями стандартов ЕСКД в редакторах (Schematic, Draftsman)
+
+!!!ВНИМАНИЕ. Проект "Default.PrjPCB" содержит измененные настройки проверок ERC (более строгие)
+см. вкладки:
+Project > Project Options > Erorr Reporting
+Project > Project Options > Connection Matriх
+
+* Для корректного отображения шрифтов в документов необходимо иметь на ПК предустановленный шрифт Altium GOST Type A.ttf.
+(C:\Users\Public\Documents\Altium\AD_GOST\Templates\Preferences)
